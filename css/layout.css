@@ -1,0 +1,74 @@
+body{
+  display:grid;
+  grid-template-areas:  "hero"
+                        "features"
+                        "testimonials"
+                        "cta"
+                        "footer";
+  grid-template-rows: 100vh auto auto auto auto;  
+  grid-template-columns: 100%;                    
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zn-hero{
+  grid-area: hero; 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meditation.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.zn-hero > * + *{
+  margin-top: var(--space-sm);
+}
+.zn-hero > .center{
+  margin-top: var(--space-xl);
+}
+
+.zn-features{
+  grid-area: features;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.zn-testimonials{
+  grid-area: testimonials;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.zn-cta{
+  grid-area: cta;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.zn-footer{
+  grid-area: footer;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.zn-footer > * + *{
+  margin-top: 1em;
+}
+
+.zn-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.zn-social > * + * {
+  margin-left: 1em;
+}
